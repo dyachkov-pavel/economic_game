@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'CodecCold';
+    src: local("CodecCold"),
+        url("/fonts/CodecCold-Bold.woff2") format("woff2"),
+        url("/fonts/CodecCold-Heavy.woff2") format("woff2"),
+        url("/fonts/CodecCold-News.woff2") format("woff2"),
+        url("/fonts/CodecCold-Bold.woff") format("woff"),
+        url("/fonts/CodecCold-Heavy.woff") format("woff"),
+        url("/fonts/CodecCold-News.woff") format("woff");
+}
+
+.wrapper {
+    overflow-x: scroll;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #252B42;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    max-height: 180px;
+    background: linear-gradient(to bottom, rgba(83, 121, 255, 0.2), rgba(83, 121, 255, 0));
+}
+
+.header_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo_group {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_image {}
+
+.logo_text {
+    font-family: 'Codec Cold', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 150px;
+    margin-left:-15px;
+    font-weight: bold;
+}
+
+@media (max-width:1050px) {
+    .logo_text {
+        display: none;
+    }
+
+    .header_reu_logo {
+        display: none;
+    }
+
+    .header_item {
+        display: none;
+    }
+
+    .header {
+        max-height: 80px;
+    }
+
+    .logo_game {
+        height: 62px;
+       
+    }
+
+    .logo_text_main {
+        display: flex !important;
+        flex-direction: column;
+        margin-top: 23px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .line_burger {
+        display: block !important;
+        margin-right: 20px;
+    }
+
+    .header_navigation {
+        display: none;
+    }
+}
+
+.header_navigation {
+    text-align: center;
+}
+
+.header_menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: center;
+}
+
+.header_item {
+    font-family: 'Codec Cold', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header_link {
+    text-decoration: none;
+    color: rgba(30, 30, 30, 1);
+    font-size: 20px;
+}
+
+.header_reu_logo {
+    
+    margin-right: 20px;
+}
+
+.image_reu {}
+
+.logo_text_main {
+    display: none;
+    font-family: 'Codec Cold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    width: 188px;
+
+    color: #1E1E1E;
+
+}
+
+@media (max-width: 450px) {
+    .line_burger {
+        margin-right: 10px;
+    }
+
+    .logo_image {
+        margin-left: -10px;
+    }
+
+    .logo_text_main {
+        margin-left: -5px;
+    }
+}
+
+
+.line_burger {
+    display: none;
+}
+
+/*-------------------------------- CSS for header, use in all pages!!! ------------------------------------------------*/

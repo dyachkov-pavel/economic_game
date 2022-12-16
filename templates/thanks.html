@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Спасибо Центру за это{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/style_for_thanks.css' %}" type="text/css">
+{% endblock %}
+{% block content %}
+<div class="main_container">
+    <div class="main_container_text">
+        <div class="main_container_maintext"> 
+        <h3>Спасибо центру за это</h3>
+        </div>
+    </div>
+    <div class="main_container_pictures">
+    <div class="picture">
+        <img src="{% static 'pictures/picture_thanks/itclogo.png' %}"  width="70%" padding="30px" id="logo_itc" alt="">
+    </div>
+    </div>
+        <div class="description"> Сайт разработан командой IT-Center
+        <br><a href="https://vk.com/it_center_reu" target="_blank">vk.com/it_center_reu</a>
+        </div>
+
+        <div class="main_container_maintext" style="color: black;"> Наши разработчики:</div>
+       
+        <div class="main_container_text_surname" id="text_surname">
+        <div class="developer">36 <a href= "https://vk.com/thirtysixth36" target="_blank">vk.com/thirtysixth36</a> — product manager</div>
+        <div class="developer">SeriouSad  <a href= "https://vk.com/seriousad" target="_blank">vk.com/seriousad</a> — IT-architect</div>
+        <div class="developer">haha  <a href= "https://vk.com/pashvd" target="_blank">vk.com/pashvd</a> — head of backend</div>
+        <div class="developer">lychok  <a href= "https://vk.com/sergeyko9" target="_blank">vk.com/sergeyko9</a> — backend-developer</div>
+        <div class="developer">x|ao  <a href= "https://vk.com/urhomme" target="_blank">vk.com/urhomme</a> — backend-developer</div>
+        <div class="developer">Civa  <a href= "https://vk.com/cornof" target="_blank">vk.com/cornof</a> — head of frontend</div>
+        <div class="developer">Lidia  <a href= "https://vk.com/daniilsokol345" target="_blank">vk.com/daniilsokol345</a> — frontend-developer</div>
+        <div class="developer">borschik  <a href= "https://vk.com/byphotoborschik" target="_blank">vk.com/byphotoborschik</a> — frontend-developer</div>
+        <div class="developer">PavelHouze  <a href= "https://vk.com/pavelhouzemain" target="_blank">vk.com/pavelhouzemain</a> — frontend-developer</div>
+        <div class="developer">storkych  <a href= "https://vk.com/storkych" target="_blank">vk.com/storkych</a> — frontend-developer</div>
+
+        </div>
+
+</div>
+{% endblock %}

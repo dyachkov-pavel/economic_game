@@ -1,0 +1,90 @@
+
+.menu_burger {
+    display: flex;
+    position: fixed;
+    right: 0;
+    justify-content: flex-end;
+    height: 100%;
+    top: 0;
+    width: 100%;
+}
+
+.menu_container {
+    background-color: rgba(8, 29, 192, 1);
+    flex-basis: 30%;
+}
+
+.container_flex {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+.menu_first {
+    margin-top: 30px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.span_line {}
+
+.menu_navigation {}
+
+.menu_menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.logo_white{
+    width: 90px ;
+    height: 90px;
+}
+
+
+.menu_item {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.menu_link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.menu_logo {
+  
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.span_line {}
+
+@media (max-width:1050px) {
+    .menu_container {
+        background-color: rgba(8, 29, 192, 1);
+        flex-basis: 50%;
+    }
+
+    .menu_item {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 0px) {
+    .menu_burger {
+        visibility: visible;
+        opacity: 1;
+        transition: 1s;
+        z-index: -1;
+    }
+}
+/*-------------------------------- CSS for menu-burger, use in all pages!!! ------------------------------------------------*/

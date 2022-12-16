@@ -1,0 +1,40 @@
+{% load static %}
+<header class="header">
+    <div class="header_container">
+        <div class="header_logo_group">
+            <div class="logo_image">
+                <img src="{% static 'pictures/pictures_header_burger/logo_game.svg' %}" alt="" class="logo_game">
+            </div>
+            <div class="logo_text">ЭКОНОМИЧЕСКАЯ
+                ИГРА 2022</div>
+        </div>
+        <div class="logo_text_main">
+           <div class="logo_main_text_element">ЭКОНОМИЧЕСКАЯ </div> 
+           <div class="logo_main_text_element">ИГРА 2022 </div> 
+        </div>
+        <nav class="header_navigation">
+            <ul class="header_menu">
+                <li class="header_item">
+                    <a href="{% url 'rules' %}" class="header_link">Правила</a>
+                </li>
+                <li class="header_item">
+                    <a href="{% url 'shares' %}"  class="header_link">Котировки акций</a>
+                </li>
+                <li class="header_item">
+                    <a href="{% url 'map' %}" class="header_link">Карта университета</a>
+                </li>
+                <li class="header_item">
+                    <a href="{% url 'index' %}" class="header_link">Личный кабинет</a>
+                </li>
+                <li class="header_item">
+                    <a href="{% url 'news' %}" class="header_link">Новости</a>
+                </li>
+                <li class="header_item">
+                    <a href="{% url 'thanks' %}" class="header_link">Спасибо ITC</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header_reu_logo"><img src="{% static 'pictures/pictures_header_burger/logo_reu.svg' %}" alt=""></div>
+        <div class="line_burger" id="close_burger"><img src="{% static 'pictures/pictures_header_burger/burger.svg' %}" alt=""></div>
+    </div>
+</header>

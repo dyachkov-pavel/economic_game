@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}Карта РЭУ{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/style_map_reu.css' %}" type="text/css">
+{% endblock %}
+{% block content %}
+<div class="main_container">
+    <div class="main_container_text">
+        <div class="main_container_maintext">Карта университета</div>
+    </div>
+    <div class="main_container_pictures">
+        <div class="main_container_image">
+            <img src="{% static 'pictures/picrures_map_reu/1к 0э.svg' %}" alt="" class="image_stock" id="image_stock">
+        </div>
+    </div>
+
+    <div></div>
+
+    <div class="main_container_textandbuttons">
+        <div class="main_container_left_button">
+            <img src="{% static 'pictures/pictures_page_slider/button_left.svg' %}" alt="" class="buttonall" id="button_left">
+        </div>
+        <div class="main_container_text_company" id="text_company">
+
+        </div>
+        <div class="main_container_right_button">
+            <img src="{% static 'pictures/pictures_page_slider/button_right.svg' %}" alt="" class="buttonall" id="button_right">
+        </div>
+    </div>
+
+
+    <div class="main_container_textandbuttons_1">
+        <div class="main_container_left_button">
+            <img src="{% static 'pictures/pictures_page_slider/button_left.svg' %}" alt="" class="buttonall" id="button_left_1">
+        </div>
+        <div class="main_container_text_company" id="text_company_1">
+
+        </div>
+        <div class="main_container_right_button">
+            <img src="{% static 'pictures/pictures_page_slider/button_right.svg' %}" alt="" class="buttonall" id="button_right_1">
+        </div>
+    </div>
+
+
+
+    <div class="name" id="text_pravil">
+        Музыкальный синонимайзер - 1к, 40<br>
+        Музыкальные пазлы - 1к, 71<br>
+        Отгадай, если сможешь - 1к, 9<br>
+        «Найдите предложение» - 1к, 10<br>
+
+    </div>
+
+
+    {% endblock %}
+    {% block js %}
+    <script src="{% static 'js_script/script_map_reu.js' %}"></script>
+    {% endblock js %}

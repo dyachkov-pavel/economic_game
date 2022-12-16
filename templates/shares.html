@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Котировки акций{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/style_slider.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'styles/style_twopage.css' %}" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+{% endblock %}
+{% block content %}
+<div class="main_container">
+    <div class="main_container_text">
+        <div class="main_container_maintext">Котировки акций</div>
+    </div>
+    <div class="main_container_pictures">
+        <div class="main_container_image">
+            <img  
+             src="{% static 'quotes/close.png' %}"   
+            alt="" class="image_stock" id="image_stock">
+        </div>
+    </div>
+    <div class="main_container_textandbuttons">
+        <div class="main_container_left_button">
+            <img src="{% static 'pictures/pictures_page_slider/button_left.svg' %}" alt="" class="buttonall" id="button_left">
+        </div>
+        <div class="main_container_text_company" id="text_company">
+            
+        </div>
+        <div class="main_container_right_button">
+            <img src="{% static 'pictures/pictures_page_slider/button_right.svg' %}" alt="" class="buttonall" id="button_right">
+        </div>
+    </div>
+
+
+    <table>
+
+        <tr>
+            <th class="th1" colspan="2">Цены акций</th>
+        </tr>
+        {% for share in shares %}
+        <tr>
+            <td class="first">{{ share.name }}</td>
+            <td>{{ share.price }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js_script/script_slider.js' %}"></script>
+{% endblock %}

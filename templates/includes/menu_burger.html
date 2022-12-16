@@ -1,0 +1,37 @@
+{% load static %}
+<div class="menu_burger" id="menu_id_burger">
+    <div class="menu_container">
+        <div class="container_flex">
+            <div class="menu_first">
+                <div class="span_line" id="menu_span">
+                    <img src="{% static 'pictures/pictures_header_burger/close.svg' %}" alt="" class="span">
+                </div>
+                <nav class="menu_navigation">
+                    <ul class="menu_menu">
+                        <li class="menu_item">
+                            <a href="{% url 'rules' %}" class="menu_link">Правила</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="{% url 'shares' %}" class="menu_link">Котировки акций</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="{% url 'map' %}" class="menu_link">Карта университета</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="{% url 'index' %}" class="menu_link">Личный кабинет</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="{% url 'news' %}" class="menu_link">Новости</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="{% url 'thanks' %}" class="menu_link">Спасибо ITC</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu_logo">
+                <img class="logo_white" src="{% static 'pictures/pictures_header_burger/logo_white.svg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>

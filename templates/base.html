@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>{% block title %}Economy_Game{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/style_for_header.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'styles/style_for_burger.css' %}" type="text/css">
+    <!-- /*these styles are for menu-burger and header, use in all pages!!! */ -->
+    {% block css %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="wrapper">
+        {% include 'includes/header.html' %}
+
+        <main class="main">
+            {% block content %}
+
+            {% endblock %}
+        </main>
+        
+        {% include 'includes/menu_burger.html' %}
+        <!-- /* HTML for menu-burger, use in all pages!!! */ -->
+        
+
+    </div>
+    <script src="{% static 'js_script/script_burger.js' %}"></script>
+    <script src="{% static 'js_script/script_firstpage.js' %}"></script>
+    <script src="{% static 'js_script/script_firstpage.js' %}"></script>
+    <!-- /* this script is for menu-burger, use in all pages!!! */ -->
+    {% block js %}
+    {% endblock %}
+</body>
+
+</html>

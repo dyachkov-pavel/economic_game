@@ -1,0 +1,110 @@
+
+.main{ 
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main_container_text {
+    width: 700px;
+}
+.main_container_maintext {
+    width: 100%;
+    text-align: center;
+    color: #081DC0;
+    font-size: 36px;
+    font-family: 'Codec Cold', sans-serif;
+    font-weight: bold;
+   
+}
+
+
+
+.main_container_text_surname{
+    margin-top: 40px;
+    text-align: center;
+    max-width: 1000px;
+    color: #081DC0;
+    font-size: 20px;
+    font-family: 'Codec Cold', sans-serif;
+    font-weight: bold;
+    line-height: 1.7em;
+}
+
+#logo_itc{
+    justify-content: center;
+    text-align: center;
+    
+    padding:30px;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px 40px;
+    
+    
+
+}
+
+@media (max-width: 1050px){
+    .main_container_maintext {
+        font-size: 24px;
+        width: 100%; 
+    }
+    .main_container_text {
+        width: 250px;
+        margin-left: 35px;
+    }
+
+   
+    .main_container_text_surname{
+    max-width: 1000px;
+}
+
+}
+@media (max-width: 768px) {
+
+  
+    .main_container_text_surname{
+    max-width: 1000px;
+    font-size: 18px;
+}
+}
+@media (max-width: 550px){
+
+    .main_container_text_surname{
+    max-width: 1000px;
+        font-size: 16px;
+}
+}
+@media (max-width: 425px){
+
+    .main_container_maintext {
+        font-size: 18px; 
+    }
+
+ 
+     .main_container_text_surname{
+    max-width: 1000px;
+    font-size: 16px;
+}
+}
+
+@media (max-width: 500px){
+    .main_container_text_surname{
+       
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Войти в личный кабинет{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/style_firstpage.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'styles/style_twopage.css' %}" type="text/css">
+{% endblock %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<div class="main_container">
+    <div class="main_container_text">
+        <div class="main_container_maintext">
+            <a class="a1">Команда: {{ request.user.name }} </a>
+            <a class="a2">Баланс: {% if request.user.balance %} {{ request.user.balance }} 
+                {% else %} {{balance.money__sum }} {% endif %} </a>
+            <br>
+            {% if request.user.credit %}
+            <a class="a3">Кредит: Взят </a>
+            {% else %}
+            <a class="a3">Кредит: - </a>
+            {% endif %}
+            {% if request.user.debit %}
+            <a class="a4">Вклад: Взят </a>
+            {% else %}
+            <a class="a4">Вклад: - </a>
+            {% endif %}
+        </div>
+
+        <table>
+
+            <tr>
+                <th class="th1" colspan="2">Ваши операции</th>
+            </tr>
+            {% for operation in operations %}
+            <tr>
+                <td class="first">Операция {{ forloop.counter }}</td>
+                <td>{{ operation.money }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+        <table>
+
+            <tr>
+                <th class="th1" colspan="2">Покупки акций</th>
+            </tr>
+            {% for share in shares %}
+            <tr>
+                <td class="first">{{ share.share.name }}</td>
+                <td>{{ share.amount }} шт.</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+</div>
+{% else %}
+<div class="main_container">
+    <div class="main_container_text">
+        <div class="main_container_maintext">
+            Вход в личный <br>кабинет команды
+        </div>
+    </div>
+    <form action="{% url 'user_login' %}" method="post" class="transparent">
+        {% csrf_token %}
+        <div class="form-inner">
+            <input class="name" type="text" name="username" placeholder="Номер счёта" id="username" required=True>
+        </div>
+        <input class="name1" type="password" name="password" placeholder="Пароль" id="password" required=True>
+        <br>
+        <button class="button">
+            Войти
+        </button>
+
+    </form>
+    {% if error %}
+    <div class="error">
+        <h4>Проверьте введенные данные</h4>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}
