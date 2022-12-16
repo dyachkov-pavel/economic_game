@@ -14,8 +14,8 @@
 ```python manage.py runserver```
 4. Создайте админа:\
 ```python manage.py createsuperuser```
-5. Для запуска celery:
-```celery -A EconomicGame worker -l INFO -P eventlet```
+5. Для запуска celery:\
+```celery -A EconomicGame worker -l INFO -P eventlet```\
 ```celery -A EconomicGame beat -l INFO```
-6. FLOWER: 
+6. FLOWER:\
 ```celery -A celery_test flower --port=5555```
